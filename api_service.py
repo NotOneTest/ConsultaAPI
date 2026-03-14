@@ -1,17 +1,17 @@
-import requests, os
+import requests
+import os
 from dotenv import load_dotenv
 from modelos import RUC, DNI
 
 load_dotenv()
 
-TOKEN = os.getenv("sk_13943.uILLsvI36KnyQ1RX3HGhCZ1VuVkSbuh9")
-BASE_URL = os.getenv("https://api.apis.net.pe/v1")
+TOKEN = os.getenv("API_TOKEN")
+BASE_URL = os.getenv("API_BASE_URL")
 
 HEADERS = {
     "Accept": "application/json",
     "Authorization": f"Bearer {TOKEN}"
 }
-
 
 def consultar_ruc(numero: str) -> RUC:
 
